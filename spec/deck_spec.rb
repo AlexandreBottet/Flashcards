@@ -32,7 +32,7 @@ RSpec.describe do
     end
 
     describe '#cards_in_category' do
-        it 'filters cards by a given category'
+        it 'filters cards by a given category' do
             card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
             card_2 = Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM)
             card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
@@ -45,7 +45,7 @@ RSpec.describe do
             expect(deck.cards).to eq([card_2, card_3])
         end
         
-        it 'filters cards by an other category'
+        it 'filters cards by an other category' do
             card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
             card_2 = Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM)
             card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
@@ -58,7 +58,7 @@ RSpec.describe do
             expect(deck.cards).to eq([card_1])
         end
         
-        it 'filters no cards if no category found'
+        it 'filters no cards if no category found' do
             card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
             card_2 = Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM)
             card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
