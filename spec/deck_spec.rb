@@ -40,9 +40,9 @@ RSpec.describe do
 
             expect(deck.cards).to eq([card_1, card_2, card_3])
 
-            deck.cards_in_category(:STEM)
+            cards_with_target_category = deck.cards_in_category(:STEM)
 
-            expect(deck.cards).to eq([card_2, card_3])
+            expect(cards_with_target_category).to eq([card_2, card_3])
         end
         
         it 'filters cards by an other category' do
@@ -53,9 +53,9 @@ RSpec.describe do
 
             expect(deck.cards).to eq([card_1, card_2, card_3])
 
-            deck.cards_in_category(:Geography)
+            cards_with_target_category = deck.cards_in_category(:Geography)
 
-            expect(deck.cards).to eq([card_1])
+            expect(cards_with_target_category).to eq([card_1])
         end
         
         it 'filters no cards if no category found' do
@@ -66,9 +66,9 @@ RSpec.describe do
 
             expect(deck.cards).to eq([card_1, card_2, card_3])
 
-            deck.cards_in_category("Pop Culture")
+            cards_with_target_category = deck.cards_in_category("Pop Culture")
 
-            expect(deck.cards).to eq([])
+            expect(cards_with_target_category).to eq([])
         end       
     end
 end
